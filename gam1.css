@@ -1,0 +1,92 @@
+.devesy1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.bdy1{
+    background: url("https://images.pexels.com/photos/18425164/pexels-photo-18425164.jpeg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+.devesyall{
+    color: #fff;
+}
+
+.ansr1all{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 500px;
+
+}
+
+
+.ansr1all button{
+    padding:  10px 20px;
+}
+
+
+
+.ansr1 a{
+    text-decoration: none;
+    color: #000;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+.ansr1{
+    background-color: aqua;
+}
+
+
+
+.ansr2 a{
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 20px;
+}
+
+
+
+
+.ansr2{
+    background-color: aqua;
+}
+
+
+
+
+
+.ansr3 a{
+    text-decoration: none;
+    color: #000;
+    padding-left: 10px;
+
+}
+
+
+
+
+
+
+.ansr3{
+    background-color: aqua;
+}

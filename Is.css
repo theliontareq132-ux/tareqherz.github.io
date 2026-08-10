@@ -1,0 +1,72 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.bdylose {}
+
+
+
+.divlose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/id/690868162/photo/portrait-of-upset-boy-showing-thumbs-down-looking-at-camera-at-home.jpg?s=1024x1024&w=is&k=20&c=qKMYm3ajrUFYMKYs2h0Q7NVUA9J4Ymlq4BmDmjIqXyA=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    font-size: 3em;
+}
+
+.divlose h1 {
+    filter: drop-shadow(2px 4px 12px white);
+}
+
+.divlose p a {
+    color: cyan;
+    text-decoration: none;
+}
+
+
+@media (max-width:700px) {
+    .divlose {
+        font-size: 1em;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+
+
+
+
+.backls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    text-decoration: none;
+    color: #fff;
+    background-color: aqua;
+}
+
+.backls a{
+     text-decoration: none;
+    color: #fff;
+    background-color: aqua;
+
+}
+
+
+
+
+
+
+
+
