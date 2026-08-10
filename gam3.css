@@ -70,6 +70,27 @@
 
 
 
+
+
+/* Hide the website on screens smaller than 1024px */
+@media (max-width: 1023px) {
+  body {
+    display: none;
+  }
+
+  body::before {
+    content: "Please open this website on a laptop or desktop.";
+    display: block;
+    padding: 40px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+
+
+
+
 .ansr5 a{
     color: #000;
 }
@@ -102,4 +123,27 @@
 
 .divallwrdhrd{
     color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* Hide the website on screens smaller than 1024px */
+@media (max-width: 1023px) {
+  body {
+    display: none;
+  }
+
+  body::before {
+    content: "Please open this website on a laptop or desktop.";
+    display: block;
+    padding: 40px;
+    text-align: center;
+    font-size: 20px;
+  }
 }
