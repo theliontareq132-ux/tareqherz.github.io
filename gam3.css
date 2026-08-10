@@ -132,18 +132,9 @@
 
 
 
-
-/* Hide the website on screens smaller than 1024px */
-@media (max-width: 1023px) {
-  body {
-    display: none;
-  }
-
-  body::before {
-    content: "Please open this website on a laptop or desktop.";
-    display: block;
-    padding: 40px;
-    text-align: center;
-    font-size: 20px;
-  }
-}
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
