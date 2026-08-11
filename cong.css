@@ -70,18 +70,20 @@
 
 
 
-        .container {
+
+            .container {
     width: 80%;
+    max-width: 1200px;
     margin: auto;
 }
 
 @media (max-width: 600px) {
     .container {
-        width: 95%;
+        width: 92%;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     button {
