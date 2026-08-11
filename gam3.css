@@ -132,9 +132,27 @@
 
 
 
-        /* Mobile */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
+
+
+
+
+
+            .container {
+    width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
