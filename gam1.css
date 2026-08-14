@@ -1,126 +1,364 @@
-.devesy1{
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bdy1 {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("https://images.pexels.com/photos/18425164/pexels-photo-18425164.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.devesyall {
+    width: 100%;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   LEVEL ONE
+========================= */
+
+.devesy {
+    width: 100%;
+
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+}
+
+.devesy h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
 }
 
 
+/* =========================
+   QUESTION
+========================= */
 
-
-.bdy1{
-    background: url("https://images.pexels.com/photos/18425164/pexels-photo-18425164.jpeg");
+.devesy1 {
     width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.devesy1 h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.3;
 }
 
 
+/* =========================
+   ANSWERS
+========================= */
 
+.ansr1all {
+    width: 100%;
+    max-width: 900px;
 
-
-.devesyall{
-    color: #fff;
-}
-
-.ansr1all{
     display: flex;
     flex-direction: row;
+
     align-items: center;
     justify-content: center;
-    margin-top: 500px;
 
+    gap: 20px;
+
+    /*
+       DO NOT use margin-top: 500px.
+       This keeps the answers responsive.
+    */
+    margin-top: 120px;
 }
 
 
-.ansr1all button{
-    padding:  10px 20px;
+/* =========================
+   ANSWER BUTTONS
+========================= */
+
+.ansr1all button {
+    width: 200px;
+    min-height: 60px;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
 
+/* =========================
+   BUTTON 1
+========================= */
 
-.ansr1 a{
-    text-decoration: none;
+.ansr1 {
+    background-color: aqua;
+}
+
+
+/* =========================
+   BUTTON 2
+========================= */
+
+.ansr2 {
+    background-color: aqua;
+}
+
+
+/* =========================
+   BUTTON 3
+========================= */
+
+.ansr3 {
+    background-color: aqua;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.ansr1 a,
+.ansr2 a,
+.ansr3 a {
+    display: flex;
+
+    width: 100%;
+    min-height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
     color: #000;
+    text-decoration: none;
+
+    padding: 10px;
+}
+
+
+/* =========================
+   REMOVE OLD DIFFERENT
+   LINK PADDINGS
+========================= */
+
+.ansr1 a {
     padding-right: 10px;
 }
 
-
-
-
-
-
-
-.ansr1{
-    background-color: aqua;
+.ansr2 a {
+    padding-bottom: 10px;
 }
 
-
-
-.ansr2 a{
-    text-decoration: none;
-    color: #000;
-    padding-bottom: 20px;
-}
-
-
-
-
-.ansr2{
-    background-color: aqua;
-}
-
-
-
-
-
-.ansr3 a{
-    text-decoration: none;
-    color: #000;
+.ansr3 a {
     padding-left: 10px;
-
 }
 
 
+/* =========================
+   HOVER
+========================= */
 
-
-
-
-.ansr3{
-    background-color: aqua;
+.ansr1all button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 
+/* =========================
+   TABLET
+========================= */
 
+@media screen and (max-width: 900px) {
 
-
-
-
-
-
-
-
-
-
-
-            .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-@media (max-width: 600px) {
-    .container {
-        width: 92%;
+    .devesyall {
+        padding: 35px 20px;
     }
 
-    h1 {
-        font-size: 24px;
+    .ansr1all {
+        margin-top: 90px;
+        gap: 15px;
     }
 
-    button {
+    .ansr1all button {
+        width: 180px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .bdy1 {
+        background-attachment: scroll;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    .devesyall {
+        min-height: 100vh;
+
+        padding: 30px 15px;
+    }
+
+
+    .devesy h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+
+    .devesy1 {
+        margin-top: 30px;
+
+        padding: 0 10px;
+    }
+
+
+    .devesy1 h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+
+    /* STACK ANSWERS ON PHONE */
+
+    .ansr1all {
         width: 100%;
-        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin-top: 60px;
+    }
+
+
+    .ansr1all button {
+        width: min(90vw, 350px);
+
+        min-height: 60px;
+
+        font-size: 1rem;
+
+        border-radius: 15px;
+    }
+
+
+    .ansr1 a,
+    .ansr2 a,
+    .ansr3 a {
+        min-height: 40px;
+
+        padding: 10px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media screen and (max-width: 400px) {
+
+    .devesyall {
+        padding: 25px 10px;
+    }
+
+
+    .devesy h1 {
+        font-size: 1.7rem;
+    }
+
+
+    .devesy1 {
+        margin-top: 25px;
+    }
+
+
+    .devesy1 h1 {
+        font-size: 1.25rem;
+    }
+
+
+    .ansr1all {
+        margin-top: 45px;
+    }
+
+
+    .ansr1all button {
+        width: 90vw;
+
+        min-height: 55px;
+
+        font-size: 0.95rem;
     }
 }

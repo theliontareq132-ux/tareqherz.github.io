@@ -1,102 +1,334 @@
-body{
-    color: #fff;
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.div1{
+
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg1 {
+    min-height: 100vh;
+
+    background-image: url("https://images.pexels.com/photos/5883539/pexels-photo-5883539.jpeg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   WELCOME TEXT
+========================= */
+
+.div1 {
+    width: 100%;
+
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-}
 
-.container{
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 100vw;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 15px;
+
+    margin-bottom: 50px;
 }
 
-.box{
+.div1 h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1.1;
+}
+
+.div1 p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+
+/* =========================
+   DIFFICULTY CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+}
+
+
+/* =========================
+   BOXES
+========================= */
+
+.box {
     width: 300px;
     height: 400px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+
     border-radius: 30px;
+
     font-size: 2em;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.box a{
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 30px;
+
+/* =========================
+   BOX HOVER
+========================= */
+
+.box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   EASY
+========================= */
+
+.easy {
+    background: linear-gradient(
+        blue,
+        pink
+    );
+}
+
+.easy a {
+    background: aqua;
+}
+
+
+/* =========================
+   HARD
+========================= */
+
+.hard {
+    background: linear-gradient(
+        red,
+        orange
+    );
 }
 
 .hard a {
     background: aqua;
 }
-.easy a {
-    background: red;
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.box a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: black;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-size: 0.7em;
+    font-weight: bold;
+
+    transition: transform 0.2s ease;
 }
 
-.easy{
-    background: linear-gradient(blue, pink);
-
+.box a:hover {
+    transform: scale(1.1);
 }
 
-.hard{
-    background: linear-gradient(red, orange);
-}
 
-.text{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-}
+/* =========================
+   CHOOSE DIFFICULTY
+========================= */
 
-.bg1{
-    background: url("https://images.pexels.com/photos/5883539/pexels-photo-5883539.jpeg");
+.text {
     width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.text h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
 }
 
 
+/* =========================
+   TABLET
+========================= */
 
+@media screen and (max-width: 900px) {
 
-
-
-
-
-
-
-
-
-
-
-
-            .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-@media (max-width: 600px) {
     .container {
-        width: 92%;
+        gap: 25px;
     }
 
-    h1 {
-        font-size: 24px;
+    .box {
+        width: 280px;
+        height: 350px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .bg1 {
+        min-height: 100vh;
+
+        padding: 30px 15px;
+
+        background-attachment: scroll;
+        background-position: center;
+        background-size: cover;
     }
 
-    button {
+
+    .div1 {
+        margin-bottom: 35px;
+    }
+
+
+    .div1 h1 {
+        font-size: 2rem;
+    }
+
+
+    .div1 p {
+        font-size: 1rem;
+    }
+
+
+    /* STACK THE BOXES */
+
+    .container {
         width: 100%;
-        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    /* MOBILE BOX */
+
+    .box {
+        width: min(90vw, 300px);
+
+        height: 280px;
+
+        font-size: 1.5em;
+
+        border-radius: 25px;
+    }
+
+
+    .box a {
+        padding: 12px 25px;
+    }
+
+
+    .text {
+        margin-top: 35px;
+    }
+
+
+    .text h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media screen and (max-width: 400px) {
+
+    .bg1 {
+        padding: 25px 10px;
+    }
+
+
+    .div1 h1 {
+        font-size: 1.7rem;
+    }
+
+
+    .div1 p {
+        font-size: 0.9rem;
+    }
+
+
+    .box {
+        width: 90vw;
+        height: 250px;
+    }
+
+
+    .text h1 {
+        font-size: 1.5rem;
     }
 }
